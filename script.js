@@ -60,10 +60,9 @@ function change() {
     btn.textContent = getRandHex();
   });
 
-  moveColumns();
-
   buttons[indexOfCorrect].textContent = color;
 
+  moveColumns();
   console.log(`Ответ: ${indexOfCorrect + 1}`);
 }
 

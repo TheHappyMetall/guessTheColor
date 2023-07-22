@@ -53,8 +53,8 @@
   border-right: 1px solid #000;
 }
 
-.select-btn:hover {
-  background-color: #dbdbdb;
+.select-btn:active {
+  letter-spacing: 1px;
 }
 
 /* HP */
