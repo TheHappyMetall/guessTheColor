@@ -63,6 +63,7 @@ function change() {
   buttons[indexOfCorrect].textContent = color;
 
   moveColumns();
+
   console.log(`Ответ: ${indexOfCorrect + 1}`);
 }
 
@@ -105,7 +106,7 @@ function moveColumns() {
   buttons.forEach((btn) => {
     number = btn.textContent;
     number = number.substring(1);
-    numbers.push(number.split(/(..)/g).filter((s) => s));
+    numbers.push(number.match(/(..)/g));
   });
 
   numbers.forEach((nu) => {
