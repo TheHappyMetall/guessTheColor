@@ -21,7 +21,7 @@
 
 .app {
   width: 100vw;
-  height: 89vh;
+  height: 80vh;
   border-bottom: 1px solid #000;
 }
 
@@ -83,12 +83,10 @@
 
 /* Columns */
 .columns-wrap {
-  height: 5vh;
+  height: 14vh;
   width: 100vw;
-
   border-bottom: 1px solid #000;
   display: flex;
-
 }
 
 .column-cont {
@@ -102,7 +100,7 @@
 
 .column {
   width: 5%;
-  border-radius:5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .column-cont:not(:last-child) {
