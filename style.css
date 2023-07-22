@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+}
+
+.score {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: #000 1px solid;
+
+  background: #fff;
+  cursor: default;
+}
+
+.app {
+  width: 100vw;
+  height: 89vh;
+  border-bottom: 1px solid #000;
+}
+
+.buttons {
+  display: flex;
+  height: 6vh;
+  transition: 0.444s ease;
+}
+
+.buttons-win {
+  background-color: green;
+}
+.buttons-lose {
+  background-color: red;
+}
+
+.select-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  font-size: 2vh;
+  transition: ease-in 0.2s;
+}
+
+.select-btn:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.select-btn:hover {
+  background-color: #dbdbdb;
+}
+
+/* HP */
+.hp-cont {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  width: 97px;
+  height: 39px;
+  border: #000 solid 1px;
+}
+
+.hps {
+  display: flex;
+  padding: 6px;
+  gap: 4px;
+}
+
+.hp {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+/* Columns */
+.columns-wrap {
+  height: 5vh;
+  width: 100vw;
+
+  border-bottom: 1px solid #000;
+  display: flex;
+
+}
+
+.column-cont {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  align-items: end;
+}
+
+.column {
+  width: 5%;
+  border-radius:5px 5px 0 0;
+}
+
+.column-cont:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
+.column-r {
+  background: red;
+}
+
+.column-g {
+  background: green;
+}
+
+.column-b {
+  background: blue;
+}
