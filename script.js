@@ -22,6 +22,7 @@ const columns = document.querySelectorAll(".column-cont");
 let color, indexOfCorrect;
 
 main();
+showMaxResult();
 
 // Functions
 function getRandInt(max) {
@@ -89,6 +90,7 @@ function damage() {
   document.querySelector(".hp").remove();
 
   if (!document.querySelector(".hp")) {
+    saveMaxResult();
     alert(
       `Уу-уУ-пc, игра закончена! Счет: ${
         document.querySelector(".score").textContent
@@ -118,4 +120,26 @@ function moveColumns() {
   document.querySelectorAll(".column").forEach((col, i) => {
     col.style.height = `${percent[i]}%`;
   });
+}
+
+function saveMaxResult() {
+  if (
+    Number(document.querySelector(".score").textContent) >
+    Number(localStorage.getItem("max_score"))
+  ) {
+    localStorage.setItem(
+      "max_score",
+      document.querySelector(".score").textContent
+    );
+  }
+}
+
+function showMaxResult() {
+  if (!localStorage.getItem("max_score")) {
+    document.querySelector(".max-score").textContent = `Рекорд: 0`;
+  } else {
+    document.querySelector(
+      ".max-score"
+    ).textContent = `Рекорд: ${localStorage.getItem("max_score")}`;
+  }
 }
